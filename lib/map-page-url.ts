@@ -30,13 +30,17 @@ export const getCanonicalPageUrl = (
 ) => (pageId = '') => {
   const pageUuid = parsePageId(pageId, { uuid: true })
 
-  if (uuidToId(pageId) === site.rootNotionPageId) {
-    return `https://${site.domain}`
-  } else {
-    return `https://${site.domain}/${getCanonicalPageId(pageUuid, recordMap, {
-      uuid
-    })}`
-  }
+  return `https://${site.domain}/${getCanonicalPageId(pageUuid, recordMap, {
+    uuid
+  })}`
+
+  // if (uuidToId(pageId) === site.rootNotionPageId) {
+  //   return `https://${site.domain}`
+  // } else {
+  //   return `https://${site.domain}/${getCanonicalPageId(pageUuid, recordMap, {
+  //     uuid
+  //   })}`
+  // }
 }
 
 function createUrl(path: string, searchParams: URLSearchParams) {

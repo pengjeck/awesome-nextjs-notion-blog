@@ -6,6 +6,8 @@ export default async (
   req: NextApiRequest,
   res: NextApiResponse
 ): Promise<void> => {
+  // console.log("Received request:", req.method, req.query.slug)
+  
   if (req.method === 'POST') {
     const increment = firestore.FieldValue.increment(1)
 
@@ -26,6 +28,7 @@ export default async (
   }
 
   if (req.method === 'GET') {
+    console.log("request detail: ", req.query)
     const snapshot = await db.pageviews.doc(req.query.slug.toString()).get()
 
     const views = snapshot.data()?.count || 0

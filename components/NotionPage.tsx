@@ -171,7 +171,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
   const canonicalPageUrl = !config.isDev && pageUrl
   // const slug = new URL(pageUrl).pathname.substr(1).replace(`-${pageId}`, '')
   const slug = new URL(pageUrl).pathname.substring(1)
-
+  console.log("notion page slug: ", slug)
   // const isRootPage =
   //   parsePageId(block.id) === parsePageId(site.rootNotionPageId)
   // 对正常的页面和博客页面打开评论

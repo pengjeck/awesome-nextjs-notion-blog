@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://szufrank.top',
+  siteUrl: 'https://blog.journeypeng.best',
   generateRobotsTxt: true,
   sitemapSize: 7000,
 }
