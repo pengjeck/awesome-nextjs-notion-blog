@@ -8,7 +8,7 @@ module.exports = {
 
   // basic site info (required)
   name: 'journey的技术博客',
-  domain: 'awesome-nextjs-notion-blog-blush.vercel.app',
+  domain: 'blog.journeypeng.best',
   author: 'journeypeng',
 
   // open graph metadata (optional)
